@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Compliance Readiness | Lumelight Concept</title>
+  <meta name="description" content="A portfolio concept for Lumelight featuring responsive web production, SEO-ready structure, reusable components, campaign content and an interactive compliance readiness experience." />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta property="og:title" content="Compliance Readiness | Lumelight Concept" />
+  <meta property="og:description" content="A cleaner path through benefits complexity, built as a responsive Lumelight portfolio concept." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#003C55" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What should a benefits compliance readiness review include?",
+        "acceptedAnswer":{"@type":"Answer","text":"A readiness review can include reporting obligations, plan documents, fiduciary processes, eligibility controls, vendor responsibilities and recurring compliance deadlines."}
+      },
+      {
+        "@type":"Question",
+        "name":"How can employers reduce manual benefits administration work?",
+        "acceptedAnswer":{"@type":"Answer","text":"Employers can reduce manual work by standardizing processes, clarifying ownership, automating repeatable tasks and using specialized partners for complex administration and compliance needs."}
+      },
+      {
+        "@type":"Question",
+        "name":"Why is benefits data quality important?",
+        "acceptedAnswer":{"@type":"Answer","text":"Accurate benefits data helps reduce downstream eligibility issues, reporting errors, member friction and avoidable administrative work."}
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --navy:#003C55;
+      --navy-2:#005070;
+      --cyan:#00CFFF;
+      --cyan-2:#59DFFF;
+      --ice:#F0FCFF;
+      --white:#fff;
+      --ink:#123746;
+      --muted:#5E7782;
+      --line:#CBEAF2;
+      --soft:#E7F8FC;
+      --shadow:0 20px 55px rgba(0,60,85,.12);
+      --shadow-sm:0 10px 28px rgba(0,60,85,.09);
+      --radius:22px;
+      --max:1220px;
+      --font:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:var(--font);color:var(--navy);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block}
+    a{color:inherit}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    :focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+    .wrap{width:min(calc(100% - 42px),var(--max));margin-inline:auto}
+    .section{padding:92px 0}
+    .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:18px;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:#4F8EA2}
+    .eyebrow::after{content:"";width:64px;height:1px;background:#83CFE1}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{letter-spacing:-.04em;line-height:1.04}
+    h1{font-size:clamp(3.6rem,7vw,6.8rem);margin-bottom:24px}
+    h2{font-size:clamp(2.6rem,5vw,4.8rem);margin-bottom:22px}
+    h3{font-size:1.35rem;margin-bottom:10px}
+    p{color:var(--muted)}
+    .lead{font-size:1.11rem;max-width:720px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 20px;border:1px solid var(--navy);background:var(--navy);color:#fff;text-decoration:none;font-weight:760;font-size:.9rem;transition:.2s ease}
+    .button:hover{transform:translateY(-2px);background:var(--navy-2)}
+    .button--cyan{background:var(--cyan);color:var(--navy);border-color:var(--cyan)}
+    .button--cyan:hover{background:var(--cyan-2)}
+    .button--ghost{background:transparent;color:var(--navy)}
+    .text-link{display:inline-flex;align-items:center;gap:9px;font-weight:800;text-decoration:none;color:var(--navy)}
+    .text-link span{transition:.2s transform}.text-link:hover span{transform:translateX(4px)}
+
+    /* Header */
+    .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,60,85,.07)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{font-size:1.8rem;font-weight:900;letter-spacing:-.06em;text-decoration:none}
+    .nav-links{display:flex;align-items:center;gap:28px;font-size:.86rem;font-weight:720}
+    .nav-links a{text-decoration:none}
+    .nav-links a:not(.button):hover{color:#0088AA}
+    .nav-cta{padding:11px 17px}
+    .menu{display:none;background:transparent;border:1px solid var(--line);padding:9px 11px;color:var(--navy)}
+
+    /* Hero */
+    .hero{background:linear-gradient(120deg,#fff 0%,var(--ice) 68%,#dff8ff 100%);overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;min-height:650px}
+    .hero-copy{padding:86px 64px 84px 0;align-self:center;position:relative;z-index:2}
+    .hero h1 span{color:#00A9D2}
+    .hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:34px}
+    .watch{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:760;font-size:.9rem}
+    .play{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:var(--navy);color:#fff}
+    .hero-media{position:relative;min-height:650px;clip-path:polygon(24% 0,100% 0,100% 100%,0 100%)}
+    .hero-media::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,60,85,.08),rgba(0,60,85,.08)),url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1400&q=85') center/cover no-repeat}
+    .hero-quote{position:absolute;left:33%;top:50%;transform:translateY(-50%);color:white;font-size:clamp(1.5rem,2.5vw,2.4rem);font-weight:900;line-height:1.12;letter-spacing:.02em;text-transform:uppercase;text-shadow:0 3px 18px rgba(0,60,85,.28)}
+    .hero-quote::after{content:"";display:block;width:40px;height:2px;background:var(--cyan);margin-top:18px}
+
+    /* Logos */
+    .logos{border-top:1px solid #D9EFF5;border-bottom:1px solid #D9EFF5;padding:34px 0;background:#fff}
+    .logos-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:#75A8B8;margin-bottom:24px}
+    .logo-row{display:grid;grid-template-columns:repeat(5,1fr);gap:32px;align-items:center;text-align:center;color:#28596C;font-weight:900;letter-spacing:.03em}
+    .logo-row span{opacity:.8}
+
+    /* Solutions */
+    .solutions-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+    .solutions-copy{position:sticky;top:120px}
+    .solution-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+    .solution{padding:34px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:220px;transition:.25s background,.25s transform}
+    .solution:hover{background:var(--ice);transform:translateY(-2px)}
+    .solution-icon{width:42px;height:42px;margin-bottom:22px;color:#008EB4}
+    .solution p{font-size:.9rem;max-width:240px}
+    .solution .arrow{color:var(--cyan);font-size:1.4rem}
+
+    /* Metrics */
+    .metrics{background:var(--ice);border-top:1px solid #DCF3F8;border-bottom:1px solid #DCF3F8}
+    .metric-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:30px 0}
+    .metric{padding:14px 30px;border-right:1px solid #B9E1EB}
+    .metric:last-child{border-right:0}
+    .metric strong{display:block;color:#00ADD7;font-size:clamp(2.5rem,4vw,4rem);letter-spacing:-.06em;line-height:1}
+    .metric span{font-size:.84rem;color:var(--ink)}
+
+    /* Expertise */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .photo-panel{position:relative;min-height:540px;background:linear-gradient(135deg,#CBEAF2,#EAF9FC);overflow:hidden}
+    .photo-panel img{width:100%;height:100%;min-height:540px;object-fit:cover;filter:saturate(.82)}
+    .photo-note{position:absolute;right:28px;bottom:28px;background:rgba(255,255,255,.94);padding:26px 28px;width:195px;font-weight:900;text-transform:uppercase;line-height:1.15;box-shadow:var(--shadow-sm)}
+    .photo-note::after{content:"";display:block;width:36px;height:2px;background:var(--cyan);margin-top:15px}
+    .check-list{display:grid;gap:16px;margin:28px 0 32px}
+    .check-item{display:flex;gap:13px;align-items:flex-start;color:#315866}
+    .check-icon{width:19px;height:19px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;background:#16C9EB;color:#fff;font-size:.72rem;font-weight:900;margin-top:2px}
+
+    /* Interactive readiness */
+    .readiness{background:var(--navy);color:#fff}
+    .readiness p{color:#B9D7E1}
+    .readiness .eyebrow{color:#73DFF7}.readiness .eyebrow::after{background:#4AB7D1}
+    .readiness-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+    .quiz-card{background:#fff;color:var(--navy);padding:36px;box-shadow:0 24px 60px rgba(0,0,0,.18)}
+    .quiz-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:26px}
+    .quiz-step{font-size:.78rem;font-weight:850;color:#6C98A7;text-transform:uppercase;letter-spacing:.12em}
+    .progress{height:4px;background:#DDEFF4;overflow:hidden;margin:0 0 30px}.progress span{display:block;height:100%;background:var(--cyan);transition:.35s width}
+    .question{font-size:1.65rem;font-weight:850;letter-spacing:-.035em;margin-bottom:24px}
+    .answers{display:grid;gap:11px}
+    .answer{width:100%;text-align:left;border:1px solid #CDE8F0;background:#fff;color:var(--navy);padding:16px 18px;font-weight:700;transition:.2s ease}
+    .answer:hover,.answer.selected{border-color:var(--cyan);background:var(--ice)}
+    .quiz-actions{display:flex;justify-content:space-between;margin-top:24px;gap:12px}
+    .quiz-actions button{padding:12px 18px;border:1px solid var(--navy);background:var(--navy);color:#fff;font-weight:800}
+    .quiz-actions button.secondary{background:#fff;color:var(--navy)}
+    .quiz-actions button:disabled{opacity:.35;cursor:not-allowed}
+    .result{display:none}.result.active{display:block}
+    .result-score{font-size:5rem;font-weight:900;color:#00BFEA;letter-spacing:-.08em;line-height:1;margin-bottom:10px}
+    .result-list{margin:24px 0;padding:0;list-style:none;display:grid;gap:12px}.result-list li{padding:14px;background:var(--ice);border-left:3px solid var(--cyan);color:#335A68}
+
+    /* Insights */
+    .insights-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
+    .insight-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}
+    .feature-story{min-height:400px;background:linear-gradient(135deg,#D8F2F8,#EEF9FB);position:relative;overflow:hidden;padding:36px;display:flex;align-items:flex-end}
+    .feature-story::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,60,85,.08),transparent 55%),url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80') center/cover;opacity:.23}
+    .feature-content{position:relative;max-width:570px}
+    .feature-content h3{font-size:2rem}
+    .side-stories{display:grid;gap:18px}
+    .story{display:grid;grid-template-columns:1.1fr .9fr;background:#fff;border:1px solid var(--line);min-height:190px}
+    .story-copy{padding:24px}
+    .story-art{background:var(--ice);display:grid;place-items:center;overflow:hidden}
+    .guide-cover{width:110px;aspect-ratio:.72;background:var(--navy);color:#fff;padding:18px;transform:rotate(6deg);box-shadow:var(--shadow-sm);font-size:.72rem;font-weight:850}
+    .video-thumb{position:relative;width:100%;height:100%;min-height:190px;background:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80') center/cover}.video-thumb::after{content:'▶';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:rgba(0,60,85,.92);color:#fff;display:grid;place-items:center}
+
+    /* Campaign asset strip */
+    .asset-strip{background:#FAFEFF;border-top:1px solid #E0F4F8}
+    .assets{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .asset{border:1px solid var(--line);background:#fff;min-height:250px;padding:24px;position:relative;overflow:hidden;transition:.25s transform,.25s box-shadow}
+    .asset:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm)}
+    .asset small{font-size:.66rem;text-transform:uppercase;letter-spacing:.15em;color:#6C9AA9;font-weight:850}
+    .asset h3{margin-top:12px}.asset p{font-size:.86rem}
+    .asset-art{position:absolute;right:-20px;bottom:-22px;width:120px;height:120px;border-radius:50%;background:var(--ice);border:22px solid var(--cyan)}
+    .asset:nth-child(2) .asset-art{border-radius:0;background:var(--navy);border:0;transform:rotate(10deg)}
+    .asset:nth-child(3) .asset-art{background:var(--cyan);border:0}
+    .asset:nth-child(4) .asset-art{background:transparent;border:22px solid var(--navy)}
+
+    /* FAQ */
+    .faq-layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:72px}
+    .faq-list{border-top:1px solid var(--line)}
+    .faq-item{border-bottom:1px solid var(--line)}
+    .faq-q{width:100%;border:0;background:transparent;padding:22px 0;color:var(--navy);display:flex;justify-content:space-between;gap:20px;text-align:left;font-size:1rem;font-weight:800}
+    .faq-a{display:grid;grid-template-rows:0fr;transition:.28s ease}.faq-a>div{overflow:hidden}.faq-a p{margin:0 40px 22px 0}.faq-item.open .faq-a{grid-template-rows:1fr}.plus{font-size:1.4rem;transition:.2s}.faq-item.open .plus{transform:rotate(45deg)}
+
+    /* CTA/Footer */
+    .final-cta{background:var(--ice);border-top:1px solid #D8F0F6}
+    .cta-row{display:flex;align-items:center;justify-content:space-between;gap:30px}.cta-row h2{font-size:clamp(2.4rem,4vw,4.2rem);margin:0}
+    .footer{padding:54px 0 28px;border-top:1px solid #D8EEF4;background:#fff}
+    .footer-grid{display:grid;grid-template-columns:1.35fr repeat(3,.7fr);gap:44px}
+    .footer-brand{font-size:2rem;font-weight:900;letter-spacing:-.06em}.tagline{font-size:.82rem;color:#557987;margin-top:10px}
+    .footer strong{display:block;margin-bottom:12px}.footer a{display:block;text-decoration:none;color:#456B78;font-size:.87rem;margin:8px 0}.footer-bottom{border-top:1px solid #E0F1F5;margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;gap:20px;font-size:.76rem;color:#7594A0}
+
+    .portfolio-badge{position:fixed;right:18px;bottom:18px;z-index:30;padding:9px 13px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-sm);font-size:.72rem;font-weight:800}
+
+    @media(max-width:980px){
+      .nav-links{display:none}.menu{display:block}.nav-links.open{position:absolute;display:flex;flex-direction:column;align-items:flex-start;left:0;right:0;top:76px;padding:22px;background:#fff;border-bottom:1px solid var(--line)}
+      .hero-grid,.solutions-grid,.split,.readiness-grid,.faq-layout{grid-template-columns:1fr}.hero-copy{padding-right:0}.hero-media{min-height:500px;clip-path:none}.solutions-copy{position:static}.metric-grid{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid #B9E1EB}.insight-grid{grid-template-columns:1fr}.assets{grid-template-columns:1fr 1fr}.logo-row{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(max-width:640px){
+      .wrap{width:min(calc(100% - 28px),var(--max))}.section{padding:66px 0}h1{font-size:3.5rem}.hero-grid{min-height:auto}.hero-copy{padding:64px 0 52px}.hero-media{min-height:380px}.hero-quote{left:16%;font-size:1.45rem}.logo-row{grid-template-columns:1fr 1fr;gap:22px}.solution-grid,.metric-grid,.assets{grid-template-columns:1fr}.solution,.metric{border-right:0}.metric{border-bottom:1px solid #B9E1EB}.story{grid-template-columns:1fr}.story-art{min-height:190px}.insights-head,.cta-row{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr 1fr}.footer-bottom{flex-direction:column}.portfolio-badge{display:none}.quiz-card{padding:24px}.hero-actions .button{width:100%}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="wrap nav">
+    <a href="#" class="brand" aria-label="Lumelight concept home">lumelight</a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+      <a href="#solutions">Solutions</a>
+      <a href="#readiness">Readiness</a>
+      <a href="#insights">Resources</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="button nav-cta">Get in touch <span>→</span></a>
+    </nav>
+    <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Compliance readiness</div>
+        <h1>Less complexity.<br><span>More possibility.</span></h1>
+        <p class="lead">Simplify benefits administration, improve compliance, and create better experiences for your people—with technology and expertise built for what’s next.</p>
+        <div class="hero-actions">
+          <a href="#readiness" class="button button--cyan">See how it works <span>→</span></a>
+          <a href="#insights" class="watch"><span class="play">▶</span> Watch overview</a>
+        </div>
+      </div>
+      <div class="hero-media" role="img" aria-label="Benefits professional in a modern workplace">
+        <div class="hero-quote">Clarity<br>moves<br>people<br>forward</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="logos" aria-label="Sample trusted organizations">
+    <div class="wrap">
+      <div class="logos-label">Trusted by leading organizations</div>
+      <div class="logo-row"><span>ADOBE</span><span>TOYOTA</span><span>HYATT</span><span>McKESSON</span><span>TEXAS HEALTH</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="solutions">
+    <div class="wrap solutions-grid">
+      <div class="solutions-copy">
+        <div class="eyebrow">Solutions</div>
+        <h2>A clearer path to what’s next.</h2>
+        <p class="lead">From eligibility to compliance to claims, Lumelight helps employers, brokers, TPAs, and health plans move faster with confidence.</p>
+        <a class="text-link" href="#readiness">Explore the experience <span>→</span></a>
+      </div>
+      <div class="solution-grid">
+        <article class="solution">
+          <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 5 7 14l17 9 17-9-17-9Z"/><path d="m7 23 17 9 17-9M7 32l17 9 17-9"/></svg>
+          <h3>Eligibility & Enrollment</h3><p>Accurate data. Fewer errors. Happier members.</p><span class="arrow">→</span>
+        </article>
+        <article class="solution">
+          <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 4 8 10v12c0 11 7 18 16 22 9-4 16-11 16-22V10L24 4Z"/><path d="M24 11v26"/></svg>
+          <h3>Compliance & Regulatory</h3><p>Stay ahead of change with expert guidance.</p><span class="arrow">→</span>
+        </article>
+        <article class="solution">
+          <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 39V25h7v14M20 39V11h7v28M33 39V18h7v21"/></svg>
+          <h3>Claims & Payments</h3><p>Smarter workflows. Better outcomes.</p><span class="arrow">→</span>
+        </article>
+        <article class="solution">
+          <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="17" cy="16" r="6"/><circle cx="32" cy="14" r="5"/><path d="M6 39v-5c0-7 5-11 11-11s11 4 11 11v5M26 25c2-3 5-4 8-4 6 0 10 4 10 10v8"/></svg>
+          <h3>Analytics & Insights</h3><p>Turn data into decisions that matter.</p><span class="arrow">→</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="metrics">
+    <div class="wrap metric-grid">
+      <div class="metric"><strong>99%+</strong><span>Eligibility accuracy</span></div>
+      <div class="metric"><strong>$70K</strong><span>First-year savings case study</span></div>
+      <div class="metric"><strong>50%</strong><span>Example reduction in manual work</span></div>
+      <div class="metric"><strong>Higher</strong><span>Member satisfaction potential</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap split">
+      <div class="photo-panel">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80" alt="Professional working in an office environment" />
+        <div class="photo-note">People<br>Ideas<br>Experience<br>Impact</div>
+      </div>
+      <div>
+        <div class="eyebrow">Why Lumelight</div>
+        <h2>Expertise that makes a difference.</h2>
+        <p class="lead">Combine deep industry knowledge with purpose-built technology to reduce administrative burden, improve compliance, and deliver a better member experience.</p>
+        <div class="check-list">
+          <div class="check-item"><span class="check-icon">✓</span><span>Dedicated experts by your side</span></div>
+          <div class="check-item"><span class="check-icon">✓</span><span>Flexible, scalable technology</span></div>
+          <div class="check-item"><span class="check-icon">✓</span><span>Consistent patterns across every digital touchpoint</span></div>
+          <div class="check-item"><span class="check-icon">✓</span><span>A partner focused on what’s next</span></div>
+        </div>
+        <a href="#insights" class="text-link">Learn more <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section readiness" id="readiness">
+    <div class="wrap readiness-grid">
+      <div>
+        <div class="eyebrow">Interactive lead-generation experience</div>
+        <h2>How ready is your benefits program?</h2>
+        <p class="lead">This assessment demonstrates how a WordPress/Elementor landing page can move beyond static content—capturing intent, educating the visitor, and creating useful first-party data for follow-up.</p>
+        <p><strong style="color:#fff">Portfolio implementation:</strong> reusable components, accessible controls, responsive behavior, progressive enhancement, hidden-data-ready JS, and SEO/AEO-friendly page structure.</p>
+      </div>
+      <div class="quiz-card" aria-live="polite">
+        <div id="quizView">
+          <div class="quiz-top"><strong>Compliance readiness check</strong><span class="quiz-step" id="stepText">Question 1 of 4</span></div>
+          <div class="progress"><span id="progressBar" style="width:25%"></span></div>
+          <div class="question" id="questionText"></div>
+          <div class="answers" id="answers"></div>
+          <div class="quiz-actions"><button class="secondary" id="backBtn" disabled>Back</button><button id="nextBtn" disabled>Next question →</button></div>
+        </div>
+        <div class="result" id="resultView">
+          <div class="quiz-step">Personalized result</div>
+          <div class="result-score" id="resultScore">82%</div>
+          <h3 id="resultTitle">Strong foundation</h3>
+          <p id="resultCopy"></p>
+          <ul class="result-list" id="resultList"></ul>
+          <button class="button button--cyan" id="restartBtn">Retake assessment</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="insights">
+    <div class="wrap">
+      <div class="insights-head">
+        <div><div class="eyebrow">Featured insights</div><h2>Turn expertise into useful content.</h2></div>
+        <a href="#faq" class="text-link">Explore all resources <span>→</span></a>
+      </div>
+      <div class="insight-grid">
+        <article class="feature-story">
+          <div class="feature-content"><div class="eyebrow">Case study</div><h3>$70,000 in First-Year Savings Through Dependent Eligibility Verification</h3><a class="text-link" href="#">Read the case study <span>→</span></a></div>
+        </article>
+        <div class="side-stories">
+          <article class="story"><div class="story-copy"><div class="eyebrow">Featured resource</div><h3>The 2026 Compliance Readiness Guide</h3><a class="text-link" href="#">Get the guide <span>→</span></a></div><div class="story-art"><div class="guide-cover">A clearer path to compliance.<br><br>2026 GUIDE</div></div></article>
+          <article class="story"><div class="story-copy"><div class="eyebrow">On-demand webinar</div><h3>What’s Next in Benefits Administration</h3><a class="text-link" href="#">Watch now <span>→</span></a></div><div class="story-art"><div class="video-thumb" aria-label="Webinar preview image"></div></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section asset-strip">
+    <div class="wrap">
+      <div class="eyebrow">Campaign system</div><h2 style="max-width:760px">One idea. Multiple branded touchpoints.</h2>
+      <p class="lead" style="margin-bottom:34px">The same campaign can scale into social, webinar, email, presentation, partner, and sales-enablement assets while maintaining a consistent visual system.</p>
+      <div class="assets">
+        <article class="asset"><small>Social media</small><h3>LinkedIn campaign card</h3><p>Short-form proof point paired with a landing-page CTA.</p><div class="asset-art"></div></article>
+        <article class="asset"><small>Email</small><h3>Nurture header system</h3><p>Reusable campaign graphics designed for responsive email.</p><div class="asset-art"></div></article>
+        <article class="asset"><small>Webinar</small><h3>Event promotion kit</h3><p>Landing-page, registration, speaker and social assets.</p><div class="asset-art"></div></article>
+        <article class="asset"><small>Sales enablement</small><h3>Presentation template</h3><p>Consistent proof points, charts and solution storytelling.</p><div class="asset-art"></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap faq-layout">
+      <div><div class="eyebrow">FAQ / AEO content</div><h2>Answer the questions people are already asking.</h2><p class="lead">Structured FAQ content can support users, organic search, answer engines, and generative discovery while making the landing page more useful.</p></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">What should a benefits compliance readiness review include?<span class="plus">+</span></button><div class="faq-a"><div><p>A readiness review can include reporting obligations, plan documents, fiduciary processes, eligibility controls, vendor responsibilities and recurring compliance deadlines.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">How can employers reduce manual benefits administration work?<span class="plus">+</span></button><div class="faq-a"><div><p>Standardizing workflows, clarifying ownership and automating repeatable tasks can reduce unnecessary effort while improving consistency and visibility.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false">Why is benefits data quality important?<span class="plus">+</span></button><div class="faq-a"><div><p>Accurate data helps reduce eligibility errors, downstream reporting issues, avoidable member friction and time spent reconciling information across systems.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section final-cta" id="contact">
+    <div class="wrap cta-row"><div><div class="eyebrow">Ready to get started?</div><h2>Let’s simplify what’s next — together.</h2></div><a class="button button--cyan" href="mailto:hello@example.com">Get in touch <span>→</span></a></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><div class="footer-brand">lumelight</div><div class="tagline">People. Technology. A Healthier Tomorrow.</div></div>
+      <div><strong>Solutions</strong><a href="#solutions">Eligibility</a><a href="#solutions">Compliance</a><a href="#solutions">Claims</a><a href="#solutions">Analytics</a></div>
+      <div><strong>Resources</strong><a href="#insights">Insights</a><a href="#insights">Webinars</a><a href="#faq">FAQs</a><a href="#">Events</a></div>
+      <div><strong>Company</strong><a href="#about">About</a><a href="#">Careers</a><a href="#contact">Contact</a><a href="#">News</a></div>
+    </div>
+    <div class="footer-bottom"><span>Portfolio concept — not an official Lumelight webpage.</span><span>Privacy &nbsp; | &nbsp; Terms &nbsp; | &nbsp; Sitemap</span></div>
+  </div>
+</footer>
+
+<div class="portfolio-badge">PORTFOLIO CONCEPT</div>
+
+<script>
+  // Mobile navigation
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click',()=>{
+    const open = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',String(open));
+  });
+
+  // Interactive assessment
+  const questions = [
+    {q:'How centralized is ownership of recurring compliance requirements?',a:[['Clear ownership and documented processes',3],['Mostly clear, with a few gaps',2],['Spread across teams and vendors',1]]},
+    {q:'How confident are you in your eligibility and enrollment data?',a:[['Very confident — regularly validated',3],['Generally confident — occasional cleanup',2],['Frequent reconciliation or uncertainty',1]]},
+    {q:'How much of your benefits administration is still manual?',a:[['Very little',3],['Some key workflows',2],['A significant amount',1]]},
+    {q:'How prepared is your team for new regulatory or reporting changes?',a:[['We have a repeatable process',3],['We react as changes arise',2],['It often feels urgent or fragmented',1]]}
+  ];
+  let step = 0;
+  let selected = null;
+  const scores = [];
+  const qText = document.getElementById('questionText');
+  const answers = document.getElementById('answers');
+  const stepText = document.getElementById('stepText');
+  const progressBar = document.getElementById('progressBar');
+  const nextBtn = document.getElementById('nextBtn');
+  const backBtn = document.getElementById('backBtn');
+  const quizView = document.getElementById('quizView');
+  const resultView = document.getElementById('resultView');
+
+  function renderQuestion(){
+    selected = scores[step] ?? null;
+    stepText.textContent = `Question ${step+1} of ${questions.length}`;
+    progressBar.style.width = `${((step+1)/questions.length)*100}%`;
+    qText.textContent = questions[step].q;
+    answers.innerHTML = '';
+    questions[step].a.forEach(([label,value])=>{
+      const btn = document.createElement('button');
+      btn.className = 'answer' + (selected===value ? ' selected':'');
+      btn.type = 'button';
+      btn.textContent = label;
+      btn.addEventListener('click',()=>{
+        selected = value;
+        [...answers.children].forEach(b=>b.classList.remove('selected'));
+        btn.classList.add('selected');
+        nextBtn.disabled = false;
+      });
+      answers.appendChild(btn);
+    });
+    backBtn.disabled = step===0;
+    nextBtn.disabled = selected===null;
+    nextBtn.textContent = step===questions.length-1 ? 'See my result →':'Next question →';
+  }
+
+  function showResult(){
+    const total = scores.reduce((a,b)=>a+b,0);
+    const pct = Math.round((total/(questions.length*3))*100);
+    const title = pct>=84 ? 'Strong foundation' : pct>=64 ? 'Good start — a few areas need attention' : 'Opportunity to simplify and strengthen';
+    const copy = pct>=84 ? 'Your answers suggest a mature approach. The next opportunity is often optimization: reducing manual work and improving visibility across teams.' : pct>=64 ? 'You have useful processes in place, but targeted improvements could make compliance work more predictable and easier to manage.' : 'Your answers point to meaningful opportunities to centralize ownership, improve data quality and reduce reactive administration.';
+    document.getElementById('resultScore').textContent = pct+'%';
+    document.getElementById('resultTitle').textContent = title;
+    document.getElementById('resultCopy').textContent = copy;
+    const resultList = document.getElementById('resultList');
+    resultList.innerHTML = '<li>Clarify recurring compliance ownership and deadlines.</li><li>Identify manual workflows that can be standardized or automated.</li><li>Use content, reporting and expert support to create a more proactive operating model.</li>';
+    quizView.style.display='none';
+    resultView.classList.add('active');
+  }
+
+  nextBtn.addEventListener('click',()=>{
+    if(selected===null) return;
+    scores[step]=selected;
+    if(step<questions.length-1){step++;renderQuestion();} else {showResult();}
+  });
+  backBtn.addEventListener('click',()=>{if(step>0){step--;renderQuestion();}});
+  document.getElementById('restartBtn').addEventListener('click',()=>{
+    scores.length=0;step=0;resultView.classList.remove('active');quizView.style.display='block';renderQuestion();
+  });
+  renderQuestion();
+
+  // Accessible FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const item = btn.closest('.faq-item');
+      const open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded',String(open));
+    });
+  });
+</script>
+</body>
+</html>
